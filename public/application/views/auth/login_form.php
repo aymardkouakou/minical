@@ -37,7 +37,7 @@
 
 		<div class="form-group">
 			<label for="email" class="sr-only">E-mail</label>
-			<input title="email" class="form-control" type="text" name="login" placeholder="Email" id="E-mail" maxlength="80" value="<?php echo $email; ?>" required>
+			<input title="email" class="form-control" type="text" name="login" placeholder="E-mail" id="email" maxlength="80" value="<?php echo $email; ?>" required>
 		</div>
 
 		<div class="form-group">
