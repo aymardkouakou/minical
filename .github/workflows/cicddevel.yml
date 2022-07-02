@@ -1,0 +1,35 @@
+name: Deploy devel
+on:
+  push:
+    branches:
+      - devel
+
+jobs:
+  build:
+    name: "Deploy to Devel"
+    runs-on: ubuntu-latest
+
+    environment: Development
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v2
+
+      - name: Generate deployment package
+        run: zip -r deploy-devel.zip . -x '*.git*'
+
+      - name: Beanstalk Deploy on devel
+        uses: einaregilsson/beanstalk-deploy@v18
+        env:
+          VERSION_LABEL: devel-${{ github.run_id }}
+          APPLICATION_NAME: MINICAL
+          ENVIRONMENT_NAME: Minical-devel
+          REGION: eu-central-1
+        with:
+          aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          region: ${{ env.REGION }}
+          application_name: ${{ env.APPLICATION_NAME }}
+          environment_name: ${{ env.ENVIRONMENT_NAME }}
+          version_label: ${{ env.VERSION_LABEL }}
+          deployment_package: deploy-devel.zip
