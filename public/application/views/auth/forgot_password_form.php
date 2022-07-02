@@ -38,7 +38,7 @@ if ($this->config->item('use_username', 'tank_auth')) {
 
 	<h2 class="form-signin-heading">Ré-initialiser votre mot de passe</h2>
 	<div class="form-group">
-		<input class="text_assisted_input email form-control" title="email" type="text" name="login" placeholder="Votre e-mail" id="login" maxlength="80">
+		<input class="text_assisted_input email form-control" title="E-mail" type="text" name="login" placeholder="Votre e-mail" id="login" maxlength="80">
 	</div>
 	<div class="form-group">
 		<div style="color: red;">

@@ -10,7 +10,7 @@
 				if (strpos($whitelabel_detail['logo'], '.')) {
 					$image_url = base_url() . 'images/' . $whitelabel_detail['logo'];
 				}
-				echo '<img src="' . $image_url . '" style="max-width: 200px;">';
+				echo '<img src="' . $image_url . '" style="max-width: 350px;">';
 			}
 			?>
 		</a>
