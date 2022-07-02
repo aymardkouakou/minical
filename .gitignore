@@ -8,3 +8,4 @@ composer.phar
 /*.sql
 /.idea/
 /nbproject/private/
+/.gitignore
