@@ -23,7 +23,7 @@ jobs:
         env:
           VERSION_LABEL: devel-${{ github.run_id }}
           APPLICATION_NAME: MINICAL
-          ENVIRONMENT_NAME: Minical-env
+          ENVIRONMENT_NAME: Minical-devel
           REGION: eu-central-1
         with:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
