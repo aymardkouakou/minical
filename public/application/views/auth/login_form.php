@@ -60,7 +60,7 @@
 		<br />
 
 		<?php if (show_registration_link()) {
-			echo anchor('/auth/register', "Vous n'avez pas de compte? Inscrivez-vous ici!");
+			//echo anchor('/auth/register', "Vous n'avez pas de compte? Inscrivez-vous ici!");
 		} ?>
 
 
